@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_profiles",
+  "info": {
+    "singularName": "user-profile",
+    "pluralName": "user-profiles",
+    "displayName": "user-profile"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "heightCm": {
+      "type": "integer"
+    },
+    "weightKg": {
+      "type": "integer"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "enumeration",
+      "enum": [
+        "Perdida Peso",
+        "Mejorar Tiempo",
+        "Primera competencia",
+        "Mantenimiento"
+      ]
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "user_profile"
+    }
+  }
+}
