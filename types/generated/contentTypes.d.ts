@@ -549,15 +549,16 @@ export interface ApiUserProfileUserProfile extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    alergias: Schema.Attribute.String;
     avatar: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    contactoEmergencia: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     dateOfBirth: Schema.Attribute.Date;
+    disciplinas: Schema.Attribute.String;
     firstName: Schema.Attribute.String;
-    goal: Schema.Attribute.Enumeration<
-      ['Perdida Peso', 'Mejorar Tiempo', 'Primera competencia', 'Mantenimiento']
-    >;
+    goal: Schema.Attribute.String;
     heightCm: Schema.Attribute.Integer;
     lastName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -566,8 +567,13 @@ export interface ApiUserProfileUserProfile extends Struct.CollectionTypeSchema {
       'api::user-profile.user-profile'
     > &
       Schema.Attribute.Private;
+    medicamentos: Schema.Attribute.String;
+    noContactoEmergencia: Schema.Attribute.String;
+    padecimientos: Schema.Attribute.String;
     phone: Schema.Attribute.String;
+    polizaSeguro: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    tipoSangre: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -30,13 +30,7 @@
       "type": "string"
     },
     "goal": {
-      "type": "enumeration",
-      "enum": [
-        "Perdida Peso",
-        "Mejorar Tiempo",
-        "Primera competencia",
-        "Mantenimiento"
-      ]
+      "type": "string"
     },
     "avatar": {
       "type": "media",
@@ -53,6 +47,30 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "mappedBy": "user_profile"
+    },
+    "contactoEmergencia": {
+      "type": "string"
+    },
+    "noContactoEmergencia": {
+      "type": "string"
+    },
+    "tipoSangre": {
+      "type": "string"
+    },
+    "alergias": {
+      "type": "string"
+    },
+    "medicamentos": {
+      "type": "string"
+    },
+    "padecimientos": {
+      "type": "string"
+    },
+    "polizaSeguro": {
+      "type": "string"
+    },
+    "disciplinas": {
+      "type": "string"
     }
   }
 }
