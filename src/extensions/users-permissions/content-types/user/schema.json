@@ -71,6 +71,18 @@
       "relation": "oneToOne",
       "target": "api::user-profile.user-profile",
       "inversedBy": "users_permissions_user"
+    },
+    "calendarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::calendario.calendario",
+      "mappedBy": "user"
+    },
+    "feedbacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feedback.feedback",
+      "mappedBy": "user"
     }
   }
 }
