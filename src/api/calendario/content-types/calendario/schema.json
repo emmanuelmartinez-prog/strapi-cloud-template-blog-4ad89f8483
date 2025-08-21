@@ -17,14 +17,38 @@
     "descripcion": {
       "type": "json"
     },
-    "disciplina": {
-      "type": "string"
-    },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "calendarios"
+    },
+    "disciplina1": {
+      "type": "string"
+    },
+    "training1": {
+      "type": "text"
+    },
+    "disciplina2": {
+      "type": "string"
+    },
+    "training2": {
+      "type": "text"
+    },
+    "disciplina3": {
+      "type": "string"
+    },
+    "training3": {
+      "type": "text"
+    },
+    "disciplina4": {
+      "type": "string"
+    },
+    "training4": {
+      "type": "text"
+    },
+    "rest": {
+      "type": "boolean"
     }
   }
 }

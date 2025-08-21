@@ -489,7 +489,10 @@ export interface ApiCalendarioCalendario extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     descripcion: Schema.Attribute.JSON;
-    disciplina: Schema.Attribute.String;
+    disciplina1: Schema.Attribute.String;
+    disciplina2: Schema.Attribute.String;
+    disciplina3: Schema.Attribute.String;
+    disciplina4: Schema.Attribute.String;
     fecha: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -498,6 +501,11 @@ export interface ApiCalendarioCalendario extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    rest: Schema.Attribute.Boolean;
+    training1: Schema.Attribute.Text;
+    training2: Schema.Attribute.Text;
+    training3: Schema.Attribute.Text;
+    training4: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
